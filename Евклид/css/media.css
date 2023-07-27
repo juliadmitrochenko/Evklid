@@ -1,0 +1,932 @@
+@media (max-width: 1024px) {
+
+    .container, .header, .footer {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    
+    .header__nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 420px;
+        max-width: 320px;
+        height: 100vh;
+        z-index: 1000;
+        padding: 50px;
+        background: #FFFFFF;
+        box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.1);
+        border-radius: 0px 0px 32px 32px;
+        overflow-y: auto;
+        visibility: hidden;
+        transform: translateX(-120%);
+        transition: visibility 0.3s ease-in-out, transform 0.3s ease-in-out;
+    }
+
+    .header__nav .header__list {
+        flex-direction: column;
+    }
+
+    .header__nav .header__item:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 60px;
+    }
+
+    .header__nav .header__link {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 29px;
+    }
+
+    .header__nav-active {
+        visibility: visible;
+        transform: none;
+    }
+
+    .header {
+        margin-bottom: 40px;
+    }
+
+    .header__logo {
+        margin: 0 auto;
+        width: 150px;
+        padding: 28px 0;
+    }
+
+    /* .stop-scroll {
+        overflow: hidden;
+    } */
+
+    .burger {
+        border: none;
+        position: relative;
+        display: block;
+    }
+
+    .burger__line {
+        position: absolute;
+        width: 30px;
+        height: 3px;
+        background-color: #333;
+    }
+
+    .burger__line:nth-child(1) {
+        top: 7px;
+    }
+
+    .burger__line:nth-child(2) {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .burger__line:nth-child(3) {
+        bottom: 7px;
+    }
+
+    .burger-active {
+        margin-bottom: 107px;
+        position: relative;
+        border: none;
+    }
+
+    .burger-active .burger__line:nth-child(2) {
+        opacity: 0;
+    }
+
+    .burger-active .burger__line:first-child {
+        left: 25%;
+        top: 50%;
+        transform: rotate(45deg);
+        transform-origin: center;
+        transition: transform 0.3s ease-in-out, top 0.3s ease-in-out, left 0.3s ease-in-out;
+    }
+
+    .burger-active .burger__line:last-child {
+        bottom: auto;
+        left: 25%;
+        top: 50%;
+        transform: rotate(-45deg);
+        transform-origin: center;
+        transition: transform 0.3s ease-in-out, top 0.3s ease-in-out, left 0.3s ease-in-out;
+    }
+
+    .slider {
+        margin-bottom: 36px;
+        background-image: url('../img/slider1024.jpg');
+        min-height: 668px;
+        padding-top: 160px;
+    }
+
+    .slider__title {
+        margin-bottom: 16px;
+        font-size: 60px;
+        line-height: 73px;
+    }
+
+    .slider__descr {
+        margin-bottom: 60px;
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .slider__button {
+        padding: 25px 33px;
+    }
+
+    .about {
+        margin-bottom: 84px;
+    }
+
+    .about__title {
+        margin-bottom: 23px;
+    }
+
+    .about__part {
+        min-height: 650px;
+        --offsets: 0;
+    }
+
+    .about__block {
+        width: 100%;
+    }
+
+    .about__block:first-child {
+        margin-right: 0;
+        margin-bottom: -2px;
+        min-height: 650px;
+      }
+
+    .about__img {
+        width: 100%;
+        min-height: 650px;
+    }
+
+    .about__content {
+        max-height: 295px;
+    }
+
+    .about__cube, .about__mechanism {
+        padding-left: 317px;
+        background-position: 76px 64px;
+    }
+
+    .howto {
+        margin-bottom: 83px;
+    }
+
+    .howto__list {
+        margin-bottom: 50px;
+    }
+
+    .howto__descr {
+        max-width: 437px;
+        margin-bottom: 24px;
+    }
+
+    .howto__block, .howto__block-2, .howto__block-3, .howto__block-4 {
+        background-image: url('../img/howto1024.jpg');
+        background-size: auto;
+
+    }
+
+    .howto__block-2 .howto__descr{
+        margin-bottom: 184px;
+    }
+
+    .howto__block-3 .howto__descr{
+        margin-bottom: 56px;
+    }
+
+    .howto__block-4 .howto__descr{
+        margin-bottom: 216px;
+    }
+
+    .footer__descr {
+        display: none;
+    }
+
+    .footer__container {
+        justify-content: space-between;
+    }
+
+    .footer__block_center {
+        margin-right: 0;
+    }
+
+    .question {
+        margin-bottom: 81px;
+    }
+
+    .question__subtitle {
+        font-size: 20px;
+    }
+
+    .question__item:nth-child(2) > .question__subtitle {
+        font-size: 21px;
+        letter-spacing: 0.6px;
+    }
+
+    .footer__block_left {
+        margin-right: auto;
+    }
+
+    .footer__logo {
+        margin-bottom: 17px;
+    }
+
+    .footer__net {
+        margin-right: 21px;
+    }
+
+    .footer__form {
+        margin-bottom: 25px;
+        width: 541px;
+    }
+
+    .footer__title {
+        margin-bottom: 30px;
+    }
+
+    .footer__button {
+        padding: 20px 36px;
+    }
+
+}
+
+@media (max-width: 1200px) {
+
+    .about__part {
+        height: 100%;
+        --offsets: 0;
+    }
+
+    .about__block:first-child {
+        margin-right: 0;
+        height: 100%;
+      }
+
+      .about__img {
+        background-image: url('../img/about-darken1024.png'), url('../img/about1024.jpg');
+        width: 100%;
+        height: 100%;
+    }
+
+}
+
+@media (max-width: 980px) {
+
+    .slider {
+        min-height: 0;
+        padding-top: 80px;
+        padding-left: 50px;
+    }
+
+    .howto {
+        margin-bottom: 53px;
+    }
+
+    .howto__title {
+        margin-bottom: 49px;
+    }
+
+    .howto__list {
+        justify-content: space-between;
+    }
+
+    .howto__item {
+        margin-right: 0;
+    }
+
+    .howto__block, .howto__block-2, .howto__block-3, .howto__block-4 {
+        padding-top: 322px;
+        background-image: url('../img/howto.png');
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-size: 668px 284px;
+    }
+
+    .howto__block-2 .howto__descr{
+        margin-bottom: 18px;
+    }
+
+    .howto__block-3 .howto__descr{
+        margin-bottom: 18px;
+    }
+
+    .howto__block-4 .howto__descr{
+        margin-bottom: 18px;
+    }
+
+    .howto__content:last-child {
+        margin-top: 0;
+    }
+
+    .howto__descr {
+        min-width: 667px;
+    }
+
+    .footer__container {
+        flex-direction: column-reverse;
+        columns: 1;
+    }
+
+    .footer__list {
+        display: none;
+    }
+
+    .footer__button_center {
+        max-width: 540px;
+    }
+
+    .footer__button {
+        margin-bottom: 46px;
+    }
+
+    .footer__logo {
+        margin-bottom: 13px;
+    }
+}
+
+@media (max-width: 768px)  {
+
+    .header {
+        width: 100%;
+    }
+
+    .header__logo {
+        padding-top: 11px;
+        padding-bottom: 6px;
+    }
+
+    .slider {
+        margin-bottom: 36px;
+        padding: 160px 40px;
+        background-size: 668px 662px;
+        border-radius: 24px;
+    }
+
+    .slider__title {
+        margin-bottom: 16px;
+        font-weight: 800;
+        font-size: 50px;
+        line-height: 61px;
+    }
+
+    .slider__descr {
+        margin-bottom: 60px;
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    .about__descr {
+        margin-bottom: 54px;
+    }
+
+    .about__img {
+        background-image: url('../img/about-darken768.png'), url('../img/about768.png');
+        border-radius: 24px;
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-bottom: 34px;
+    }
+
+    .about__text_bold {
+        max-width: 366px;
+        font-weight: 600;
+    }
+
+    .about__button {
+        margin-bottom: 34px;
+    }
+
+    .about__cube, .about__mechanism {
+        padding-top: 35px;
+        padding-bottom: 35px;
+        padding-left: 170px;
+        background-position: 40px 64px;
+        background-size: 114px 99px;
+    }
+
+    .howto__block, .howto__block-2, .howto__block-3, .howto__block-4 {
+        background-image: url('../img/howto768.png');
+        background-size: 100% 284px;
+    }
+
+    .howto__content {
+        margin-right: 0;
+    }
+
+    .howto__descr {
+        min-height: 0;
+        min-width: 0;
+        max-width: 667px;
+        margin-right: 0;
+    }
+
+    .question {
+        margin-bottom: 113px;
+    }
+
+    .question__title {
+        margin-bottom: 37px;
+    }
+
+    .question__item {
+        width: 100%;
+    }
+
+    .footer__block {
+        flex-direction: column-reverse;
+        columns: 1;
+    }
+}
+
+@media (max-width: 760px) {
+
+    .container, .header, .footer {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .slider {
+        padding: 60px 40px;
+    }
+
+    .slider__title {
+        font-size: 44px;
+        line-height: 55px;
+    }
+
+    .slider__descr {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 18px;
+    }
+
+    .slider__button {
+        padding: 20px 30px;
+        font-weight: 700;
+        font-size: 18px;
+    }
+
+    .about__text_bold {
+        font-weight: 400;
+        line-height: 28px;
+    }
+
+    .footer__form {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 554px) {
+
+    .burger-active {
+        margin-bottom: 60px;
+    }
+
+    .header__nav {
+        width: 220px;
+        padding: 20px;
+    }
+
+    .slider__title {
+        font-size: 35px;
+        line-height: 45px;
+    }
+
+    .slider__descr {
+        margin-bottom: 30px;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .slider__button {
+        padding: 18px 28px;
+        font-weight: 700;
+        font-size: 16px;
+    }
+
+    .about__title {
+        font-size: 35px;
+    }
+
+    .about__block {
+        padding-bottom: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about__block:first-child {
+        min-height: 0;
+        padding-top: 208px;
+        border-radius: 24px;
+    }
+
+    .about__part {
+        gap: 0;
+        flex-direction: column;
+        padding-top: 0;
+    }
+
+    .about__descr {
+        margin-bottom: 14px;
+    }
+
+    .about__img {
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 0;
+        background-position: top;
+        background-image: url('../img/about320.png');
+    }
+
+    .about__text_bold {
+        margin-bottom: 12px;
+        color: #333;
+    }
+
+    .about__button {
+        position: relative;
+        margin-right: auto;
+        margin-bottom: 34px;
+        color: var(--orange);
+    }
+
+    .about__cube, .about__mechanism {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        padding-left: 30px;
+        background-image: none;
+    }
+
+    .about__subtitle {
+        margin-bottom: 7px;
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    .about__text {
+        font-size: 14px;
+        line-height: 28px;
+    }
+
+    .howto__title {
+        font-size: 35px;
+    }
+
+    .howto__button_orange {
+        padding: 16px 25px;
+        margin-right: 6px;
+    }
+
+    .howto__button_white {
+        padding: 16px 30px;
+    }
+
+    .question__title {
+        font-size: 35px;
+    }
+
+    .question__subtitle {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    .question__descr {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 20px;
+      }
+
+    .question__item:nth-child(2) > .question__subtitle {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 24px;
+        letter-spacing: 0.1px;
+    }
+
+
+}
+
+@media (max-width: 320px) {
+    .container, .header, .footer {
+        width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+    } 
+
+    .header {
+        margin-bottom: 28px;
+        border-radius: 0px 0px 16px 16px;
+    }
+
+    .header__logo {
+        padding-top: 16px;
+        padding-bottom: 16px;
+        width: 110px;
+    }
+
+    .slider {
+        margin-bottom: 60px;
+        min-height: 308px;
+        padding: 60px 21px;
+        background-size: 290px 308px;
+        border-radius: 16px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .slider__title {
+        margin-bottom: 6px;
+        font-weight: 800;
+        font-size: 20px;
+        line-height: 24px;
+        text-align: center;
+    }
+
+    .slider__descr {
+        right: 300px;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 15px;
+        text-align: center;
+    }
+
+    .slider__button {
+        transform: translateX(42px);
+        left: 200px;
+        padding: 13px 28px;
+        font-size: 12px;
+        line-height: 15px;
+        border-radius: 8px;
+    }
+
+    .about {
+        margin-bottom: 60px;
+    }
+
+    .about__title {
+        margin-bottom: 20px;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 29px;
+    }
+
+    .about__descr {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 28px;
+    }
+
+    .about__block {
+        padding-bottom: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about__block:first-child {
+        min-height: 0;
+        padding-top: 208px;
+    }
+
+    .about__part {
+        gap: 0;
+        flex-direction: column;
+        padding-top: 0;
+    }
+
+    .about__descr {
+        margin-bottom: 14px;
+    }
+
+    .about__img {
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 0;
+        background-position: top;
+        background-image: url('../img/about320.png');
+        background-size: 290px 200px;
+    }
+
+    .about__text_bold {
+        margin-bottom: 12px;
+        color: #333;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 28px;
+    }
+
+    .about__text {
+        font-size: 14px;
+        line-height: 28px;
+    }
+
+    .about__button {
+        position: relative;
+        margin-right: auto;
+        padding: 10px 44px;
+        margin-bottom: 34px;
+        color: var(--orange);
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 15px;
+        border: 2px solid var(--orange);
+        border-radius: 8px;
+    }
+
+    .about__content {
+        width: 100%;
+        border: none;
+    }
+
+    .about__content:first-child {
+        margin-bottom: 29px;
+    }
+
+    .about__cube {
+        padding-top: 59px;
+        padding-left: 0;
+        padding-bottom: 0;
+        background-image: url('../img/cube320.svg');
+        background-position: top left;
+        background-size: 64px auto;
+    }
+
+    .about__mechanism {
+        padding-top: 62px;
+        padding-left: 0;
+        padding-bottom: 0;
+        background-image: url('../img/mechanism320.svg');
+        background-position: top left;
+        background-size: 64px auto;
+    }
+
+    .about__subtitle {
+        margin-bottom: 7px;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    .howto {
+        margin-bottom: 60px;
+    }
+
+    .howto__title {
+        margin-bottom: 20px;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 29px;
+    }
+
+    .howto__list {
+        margin-bottom: 14px;
+    }
+
+    .howto__item {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+    .howto__block, .howto__block-2, .howto__block-3, .howto__block-4 {
+        padding-top: 176px;
+        background-size: 290px 160px;
+    }
+
+    .howto__subtitle {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 32px;
+    }
+
+    .howto__descr {
+        min-width: 290px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 28px;
+    }
+
+    .howto__button_orange {
+        margin-right: 6px;
+        padding: 12px 44px;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 15px;
+        border-radius: 8px;
+    }
+
+    .howto__button_white {
+        padding: 12px 30px;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
+        border-radius: 8px;
+    }
+
+    .question {
+        margin-bottom: 61px;
+    }
+
+    .question__title {
+        margin-bottom: 17px;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 29px;
+    }
+
+    .question__subtitle {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    .question__item:nth-child(2) > .question__subtitle {
+        font-size: 14px;
+        letter-spacing: 0.1px;
+    }
+
+    .question__item:nth-child(3) > .question__subtitle {
+        font-size: 15px;
+    }
+
+    .question__item svg {
+        width: 30px;
+        height: 30px;
+    }
+
+    .footer {
+        padding: 33px 14px;
+    }
+
+    .footer__title {
+        margin-bottom: 20px;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 29px;
+    }
+
+    .footer__form {
+        margin-bottom: 22px;
+        width: 290px;
+    }
+
+    .footer__button {
+        margin-bottom: 10px;
+        padding: 12px 28px;
+        font-size: 12px;
+        border-radius: 8px;
+    }
+
+    .footer__line {
+        width: 100%;
+        position: relative;
+        display: inline-block;
+    }
+      
+      .footer__line:before{ 
+        content: " ";
+        background: #414141;
+        width: 100%;
+        height: 1px;
+        top: -12px;
+        position: absolute;
+    }
+
+    .footer__container {
+        align-items: center;
+    }
+
+    .footer__block {
+        align-items: center;
+        margin-right: 0;
+    }
+
+    .footer__logo {
+        width: 131px;
+    }
+
+    .footer__net {
+        padding-right: 35px;
+        position: relative;
+    }
+
+    .footer__net > svg {
+        position: absolute;
+        left: 18px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .footer__net > svg:last-child {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+    }
+
+
+}
